@@ -20,23 +20,33 @@
 </head>
 
 <body>
-    <h1>Hello World!!!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum amet harum pariatur eos perspiciatis deleniti minus assumenda, omnis sunt perferendis enim quasi atque, eaque facere, molestiae, minima nemo voluptate. Harum perspiciatis
-        ducimus tempore dolorem possimus impedit voluptatibus mollitia suscipit excepturi obcaecati enim, iusto accusamus voluptates error dignissimos sequi fugit repudiandae, amet ab debitis! Modi nesciunt rem asperiores facilis deserunt mollitia
-        at eius, harum delectus qui id quis laborum porro ea, sit labore, reprehenderit, maxime sint aspernatur saepe! Soluta vitae molestias eius impedit sed atque libero ipsum vero tempora labore magni, deleniti voluptatibus distinctio qui
-        corporis quia quibusdam, esse ratione eveniet perspiciatis a debitis. Minus amet tempora optio quas vero pariatur maiores atque beatae ad dolore. Totam quisquam ea sit consequuntur vitae commodi voluptatibus, dolores voluptas harum
-        asperiores cupiditate, ex maxime a. Sed perspiciatis maiores alias voluptatum quam autem explicabo sint, accusantium, corrupti cum, dolor quis recusandae iusto repellendus? Tenetur molestias nemo at facilis dolorum numquam nam aliquam?
-        Laborum sint aliquid velit, earum temporibus alias dicta expedita ab quod aperiam voluptatum veniam ut est ex repellat ratione molestiae voluptas, ipsa cum quia nulla. Ut, at. Possimus quisquam minima vero nam adipisci corrupti iste libero
-        nostrum consequatur vitae excepturi iure fugit ullam quidem fugiat optio sapiente dolorum doloribus sint, amet labore quaerat inventore beatae nulla. Et ex possimus eius nemo vero inventore quisquam minus quas iure! Sit delectus vel quam id
-        ducimus, dolorem iure cum est illum blanditiis nostrum saepe veritatis vitae omnis quisquam animi, rem impedit qui ut ab provident sapiente, aliquam quia excepturi. Facilis natus libero modi eos accusantium, temporibus debitis provident
-        blanditiis sunt eaque et illum nemo quibusdam assumenda? Accusamus consectetur excepturi nobis reiciendis ut quaerat maxime placeat magnam earum! Quasi unde voluptatum repudiandae recusandae, incidunt aliquid iste dolore labore fuga,
-        cupiditate nostrum sapiente provident praesentium totam aliquam dicta saepe voluptatibus nulla, atque tempore error vitae odit. Perspiciatis enim est itaque et, ad, iure consequatur laboriosam quaerat officiis esse asperiores iusto quis
-        maiores incidunt, ipsa eligendi explicabo dolor eveniet fugit ex similique assumenda beatae, exercitationem. Ipsum eveniet suscipit autem laborum molestias minus aliquid ratione mollitia, qui dolorem adipisci accusamus nam sapiente delectus
-        temporibus blanditiis soluta rem iusto cupiditate omnis deserunt modi. Ipsam magni provident labore hic voluptatum doloremque expedita molestias unde esse at vel facilis, eum soluta quae. Vel illum necessitatibus eaque dolorum laudantium
-        numquam accusamus modi quis, aliquam deserunt similique error quaerat odio, facere. Sapiente inventore sed, non nulla rerum consectetur autem saepe quos ea dignissimos, quod eos accusamus quasi soluta minus, error libero optio sint earum
-        mollitia distinctio sunt! Laudantium saepe quia quam reprehenderit quisquam nemo, veritatis voluptatem qui aperiam excepturi harum. Quibusdam vel, harum neque eaque. Totam dolorem porro amet soluta, excepturi, quidem quisquam! Hic soluta
-        itaque culpa modi illo iste saepe! Pariatur sunt molestias beatae, et autem necessitatibus quisquam vitae iste, id. A modi sint saepe tenetur sunt aut, quaerat officiis at incidunt ipsam. Repellat delectus aut quae doloremque facere iusto
-        ducimus, quis unde ratione accusantium sapiente nemo culpa alias beatae excepturi cumque mollitia soluta.</p>
+    <div id="wrapper">
+        <header>
+            <img src="assets/oli.webp" alt="" class="logo">
+            <hr>
+            <h2 class="title">Oli - Sound Recorder</h2>
+        </header>
+        <div class="content">
+            <h1 class="timer"><span class="hours">00</span>:<span class="min">00</span>:<span class="sec">12</span></h1>
+            <h2 class="state">{{state}}</h2>
+            <img src="assets/mascot.svg" alt="" class="mascot">
+        </div>
+        <div class="controls">
+            <svg :class="{isPlay}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path d="M10 8.64L15.27 12 10 15.36V8.64M8 5v14l11-7L8 5z" />
+            </svg>
+            <svg @click="play" class="mic" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z" />
+                <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+            <svg :class="{isPlay}" class="stop" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path d="M16 8v8H8V8h8m2-2H6v12h12V6z" />
+            </svg>
+        </div>
+    </div>
 </body>
+<script src="functions/index.js"></script>
 
 </html>
